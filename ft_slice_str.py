@@ -6,9 +6,12 @@ def ft_len(str):
 
 
 def ft_slice_str(str, start, end):
-    x = ""
-    for i in range(start, end+1):
-        if i >= ft_len(str):
-            break
-        x = x + str[i]
-    return x
+    b = ft_len(str)
+    c = ""
+    if end > b:
+        for i in range(1, b):
+            c += str[i]
+    else:
+        for i in range(start - 1, end):
+            c += str[i]
+    return c
